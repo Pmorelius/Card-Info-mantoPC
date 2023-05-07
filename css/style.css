@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg-color: #cc3843;
+    --bg-color2: #fff;
+    --bg-color3: #ff4500;
+    --bg-color4: linear-gradient(45deg, #32de84 0%, #2d54fd 100%);
+    --bg-color-right: #0c1f2c;
+    --bg-color-right2: #232830;
+    --bg-button-color: #cb2140;
+    --text-color1: #fff;
+    --text-color2: #3fa9f5;
+    --line-border: #cb1f40;
+    --line-border2: #ff4500;
+}
+body{
+    background-color: silver;
+    font-family: 'Poppins', sans-serif;
+}
+::-webkit-scrollbar
+{
+    display: none;
+}
+button{
+    border: none;
+    cursor: pointer;
+}
+button:focus{
+    outline: 0;
+}
+.card{
+    width: 892px;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	display: flex;
+	align-items: center;
+}
+.card .left{
+    width: 480px;
+    height: 553px;
+    background-color: var(--bg-color);
+    border-radius: 23px;
+    display: flex;
+    align-items: center;
+}
+.wordmark{
+    opacity: 0.6;
+    transform: rotate(-90deg) scale(1.2);
+    margin-left: -100px;
+}
+.right{
+    width: 654px;
+    height: 500px;
+    background: var(--bg-color-right2);
+    position: absolute;
+    left: -10%;
+    transform: translateX(50%);
+    border-radius: 23px;
+}
+.right .helmet{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.right .productInfo{
+    width: 300px;
+    height: 30px;
+    margin: 50px 0 0px 235px;
+    color: var(--text-color1);
+}
+.productInfo h1{
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--text-color2);
+    line-height: 40px;
+    margin-bottom: 7px;
+    margin-top: -15px;
+}
+.productInfo h2{
+    font-weight: 300;
+    font-size: 23px;
+    letter-spacing: 1.6px;
+    margin-bottom: 30px;
+}
+.details{
+    height: 145px;
+}
+.size, .durability{
+    width: 50%;
+    float: left;
+}
+.size{
+    border-right: 1px solid var(--line-border);
+    padding: 30px 0;
+}
+.durability{
+    text-align: center;
+}
+.durability h4{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+button{
+    height: 48px;
+    background: var(--bg-button-color);
+    border-radius: 90px;
+    font-weight: 300;
+    line-height: 35px;
+    font-size: 14px;
+    padding: 0 20px;
+    color: var(--text-color1);
+}
+i.favorite{
+    font-size: 12px;
+    margin: 0 12px 0 20px;
+    color: var(--line-border);
+}
+a{
+    font-size: 17px;
+    color: var(--text-color1);
+    font-weight: 500;
+    opacity: 0.3;
+    text-decoration: none;
+}
+h3{
+    width: 80px;
+    height: 80px;
+    font-weight: 300;
+    line-height: 80px;
+    font-size: 16px;
+    margin-left: 30px;
+    position: relative;
+}
+h3::after{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid var(--line-border2);
+   /*  border-top-color: transparent; */
+    transform: rotate(-45deg) translate(-50%, -50%);
+}
+h4{
+    font-weight: bold;
+    line-height: normal;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+p{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    line-height: normal;
+    text-align: center;
+    font-weight: 300;
+    line-height: 28px;
+    font-size: 14px;
+    border-radius: 50%;
+    transition: 0.3s linear;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+p:hover{
+    border: 1px solid var(--line-border2);
+}
+p:nth-of-type(1)
+{
+    border: 1px solid var(--line-border2);
+}
+.slider{
+    width: 60px;
+    height: 60px;
+    background-color: var(--bg-color2);
+    border-radius: 50%;
+    line-height: 70px;
+    text-align: center;
+    margin-left: -30px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.2);
+    color: var(--bg-color3);
+    cursor: pointer;
+}
+.sliders{
+    width: 60px;
+    height: 60px;
+    background-color: var(--bg-color2);
+    border-radius: 50%;
+    line-height: 70px;
+    text-align: center;
+    margin-left: -30px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.2);
+    color: var(--bg-color3);
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    right: -5px;
+	transform: translate(50%, 50%);
+}
+@media screen and (max-width: 576px){
+    .card{
+        transform: rotate(90deg) scale(0.7) translate(calc(50% - 25vh),50%);
+		position: static;
+    }
+}
